@@ -1,14 +1,17 @@
-//
-//  main.cpp
-//  CW34.1_Team1
-//
-//  Created by Єгор on 20.05.2025.
-//
+#include "Staff.hpp"
 
-#include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main() {
+    Staff s;
+    Employee e;
+    
+    s.addNewEmployee(e);
+    s.addNewEmployee(e);
+    s.printInfo();
+    cout<<endl;
+    
+    s.deleteEmployeeByIndex(0);
+    s.printInfo();
+    cout<<endl;
+    
     return 0;
 }
