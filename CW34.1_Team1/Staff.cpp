@@ -2,23 +2,30 @@
 
 
 Staff::Staff() { 
-    staff.push_back(Employee());
+    premium = 0;
 }
 
-Staff::Staff(vector<Employee> staff) { 
-    this->staff = staff;
+Staff::Staff(string name, string surname, string fatherName, string position, float salary, float premium) : Employee(name, surname, fatherName, position, salary) {
+    this->premium = premium;
+}
+
+void Staff::setPremium(float premium) { 
+    this->premium = premium;
+}
+
+float Staff::getPremium() const { 
+    return premium;
 }
 
 void Staff::printInfo() const { 
-    for (int i=0; i<staff.size(); i++) {
-        cout<<"Hello world!\n";
-    }
+    cout<<"Name: "<<name<<endl
+    <<"Surname: "<<surname<<endl
+    <<"Father name: "<<fatherName<<endl
+    <<"Position: "<<position<<endl
+    <<"Salary: "<<salary<<endl
+    <<"Premium: "<<premium<<endl;
 }
 
-void Staff::addNewEmployee(Employee e) { 
-    staff.push_back(e);
-}
-
-void Staff::deleteEmployeeByIndex(int index) { 
-    staff.erase(staff.begin() + index);
+float Staff::calcSalary() const { 
+    return salary + premium;
 }
