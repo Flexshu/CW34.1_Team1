@@ -1,23 +1,22 @@
 #ifndef Staff_hpp
 #define Staff_hpp
 
-#include <iostream>
-#include <vector>
-#include <string>
 #include "Employee.hpp"
 using namespace std;
 
-class Staff{
-    vector<Employee> staff;
+class Staff : public Employee{
+protected:
+    float premium;
     
 public:
     Staff();
-    Staff(vector<Employee> staff);
+    Staff(string name, string surname, string fatherName, string position, float salary, float premium);
+    
+    void setPremium(float premium);
+    float getPremium() const;
     
     void printInfo() const;
-    
-    void addNewEmployee(Employee e);
-    void deleteEmployeeByIndex(int index);
+    float calcSalary() const;
 };
 
 #endif

@@ -36,8 +36,8 @@ public:
     string setPosition()const;
     float setSalary()const;
     
-    virtual void show()const=0;
-    virtual float calc()const=0;
+    virtual void printInfo()const=0;
+    virtual float calcSalary()const=0;
 };
 
 #endif /* Employee_hpp */
