@@ -1,5 +1,5 @@
-#ifndef Staff_hpp
-#define Staff_hpp
+#ifndef Outstaff_hpp
+#define Outstaff_hpp
 
 #include "Employee.hpp"
 using namespace std;
