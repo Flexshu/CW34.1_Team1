@@ -6,6 +6,10 @@ Staff::Staff() {
 }
 
 Staff::Staff(string name, string surname, string fatherName, string position, float salary, float premium) : Employee(name, surname, fatherName, position, salary) {
+    if (salary < 0) {
+        this->salary = 0;
+        throw SalaryException("salary is negative", this->name);
+    }
     this->premium = premium;
 }
 
@@ -26,6 +30,11 @@ void Staff::printInfo() const {
     <<"Premium: "<<premium<<endl;
 }
 
-float Staff::calcSalary() const { 
-    return salary + premium;
+float Staff::calcSalary() const {
+    if (premium < 0) {
+        throw PrizeException("prize is negative", name);
+    }
+    else{
+        return salary + premium;
+    }
 }

@@ -2,7 +2,7 @@
 #define Outstaff_hpp
 
 #include "Employee.hpp"
-using namespace std;
+#include "EmployeeException.h"
 
 class Outstaff : public Employee{
 protected:

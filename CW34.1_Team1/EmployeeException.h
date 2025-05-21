@@ -28,13 +28,13 @@ public:
 
 class PrizeException : public EmployeeException{
 private:
-    float salary;
+    string name;
 public:
-    PrizeException(string utext, float usalary) : EmployeeException(utext){
-        salary = usalary;
+    PrizeException(string utext, string uname) : EmployeeException(utext){
+        name = uname;
     }
     string showMessage()const{
-        return "PrizeException ( " + to_string(salary) + " ) " + text;
+        return "PrizeException ( " + name + " ) " + text;
     }
 };
 

@@ -20,5 +20,21 @@ int main() {
     cout<<"———————————————————————————————\n";
     team.addEmployee(&yevhen);
     
+    try{
+        Staff outsider("Biba", "Abobenko", "Bobovych", "random noob", -10, 10);
+    }
+    catch (const SalaryException& e){
+        cout<<e.showMessage()<<endl;
+    }
+    
+    try{
+        Staff outsider("Biba", "Abobenko", "Bobovych", "random noob", 10, -10);
+        int s = outsider.calcSalary();
+        cout<<"Result: "<<s<<endl;
+    }
+    catch (const PrizeException& e){
+        cout<<e.showMessage()<<endl;
+    }
+    
     return 0;
 }
