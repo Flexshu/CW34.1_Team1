@@ -2,6 +2,7 @@
 #define Staff_hpp
 
 #include "Employee.hpp"
+#include "EmployeeException.h"
 using namespace std;
 
 class Staff : public Employee{

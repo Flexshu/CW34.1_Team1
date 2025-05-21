@@ -6,6 +6,10 @@ Outstaff::Outstaff() {
 }
 
 Outstaff::Outstaff(string name, string surname, string fatherName, string position, float salary, int workedDays) : Employee(name, surname, fatherName, position, salary) {
+    if (salary < 0) {
+        this->salary = 0;
+        throw SalaryException("salary is negative", this->name);
+    }
     this->workedDays = workedDays;
 }
 
