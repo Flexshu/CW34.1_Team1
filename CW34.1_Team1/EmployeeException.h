@@ -1,4 +1,6 @@
-#pragma once
+#ifndef EmployeeException_hpp
+#define EmployeeException_hpp
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -12,7 +14,6 @@ public:
     virtual string showMessage()const = 0;
 };
 
-//////////////////////////////////////////////////////////
 class NameException : public EmployeeException{
 private:
     string name;
@@ -25,7 +26,6 @@ public:
     }
 };
 
-//////////////////////////////////////////////////////////
 class PrizeException : public EmployeeException{
 private:
     float salary;
@@ -38,7 +38,6 @@ public:
     }
 };
 
-//////////////////////////////////////////////////////////
 class SalaryException : public EmployeeException{
 private:
     string name;
@@ -50,3 +49,5 @@ public:
         return "SalaryException ( " + name + " ) " + text;
     }
 };
+
+#endif

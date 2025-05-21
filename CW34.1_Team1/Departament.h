@@ -1,16 +1,16 @@
-#pragma once
-#include <iostream>
-#include <string>
+#ifndef Department_hpp
+#define Department_hpp
+
 #include <vector>
-#include "Staff.h"
-#include "Outstaff.h"
+#include "Staff.hpp"
+#include "Outstaff.hpp"
 #include "EmployeeException.h"
 using namespace std;
 
 class Departament{
 private:
     string name;
-    vector<Employee*>arr;
+    vector<Employee*> arr;
 public:
     Departament(string name){
 		if(name.size() < 2) throw new NameException("Коротко(менее двух символов).", name);
@@ -18,7 +18,7 @@ public:
     }
     void showEmployees(){
         for (int i = 0; i < arr.size(); i++){
-            arr[i]->showInfo();
+            arr[i]->printInfo();
         }
     }
     void addEmployee(Employee* obj){
@@ -35,9 +35,11 @@ public:
     void findEmployeeByName(string name){
 		for (int i = 0; i < arr.size(); i++){
 			if(arr[i]->getName() == name){
-				arr[i]->showInfo();
+				arr[i]->printInfo();
 				break;
 			}
 		}
 	};
 };
+
+#endif
