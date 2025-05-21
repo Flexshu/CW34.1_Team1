@@ -31,10 +31,10 @@ public:
     void setSalary(float salary);
     
     string getName()const;
-    string setSurname()const;
-    string setFatherName()const;
-    string setPosition()const;
-    float setSalary()const;
+    string getSurname()const;
+    string getFatherName()const;
+    string getPosition()const;
+    float getSalary()const;
     
     virtual void show()const=0;
     virtual float calc()const=0;

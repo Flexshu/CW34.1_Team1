@@ -48,18 +48,18 @@ string Employee::getName() const {
     return name;;
 }
 
-string Employee::setSurname() const { 
+string Employee::getSurname() const { 
     return surname;;
 }
 
-string Employee::setFatherName() const { 
+string Employee::getFatherName() const {
     return fatherName;;
 }
 
-string Employee::setPosition() const { 
+string Employee::getPosition() const {
     return position;;
 }
 
-float Employee::setSalary() const { 
+float Employee::getSalary() const {
     return salary;;
 }
